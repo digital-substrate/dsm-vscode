@@ -1,0 +1,338 @@
+{
+	"any_concept": {
+		"prefix": "any_concept",
+		"body": [
+			"any_concept"
+		],
+		"description": "an any_concept"
+	},
+	"bool": {
+		"prefix": "bool",
+		"body": [
+			"bool"
+		],
+		"description": "a bool"
+	},
+	"uint8": {
+		"prefix": "uint8",
+		"body": [
+			"uint8"
+		],
+		"description": "an unsigned 8 bits integer"
+	},
+	"uint16": {
+		"prefix": "uint16",
+		"body": [
+			"uint16"
+		],
+		"description": "an unsigned 16 bits integer"
+	},
+	"uint32": {
+		"prefix": "uint32",
+		"body": [
+			"uint32"
+		],
+		"description": "an unsigned 32 bits integer"
+	},
+	"uint64": {
+		"prefix": "uint64",
+		"body": [
+			"uint64"
+		],
+		"description": "an unsigned 64 bits integer"
+	},
+	"int8": {
+		"prefix": "int8",
+		"body": [
+			"int8"
+		],
+		"description": "a signed 8 bits integer"
+	},
+	"int16": {
+		"prefix": "int16",
+		"body": [
+			"int16"
+		],
+		"description": "a signed 16 bits integer"
+	},
+	"int32": {
+		"prefix": "int32",
+		"body": [
+			"int32"
+		],
+		"description": "a signed 32 bits integer"
+	},
+	"int64": {
+		"prefix": "int64",
+		"body": [
+			"int64"
+		],
+		"description": "a signed 64 bits integer"
+	},
+	"float": {
+		"prefix": "float",
+		"body": [
+			"float"
+		],
+		"description": "a 32 bits float"
+	},
+	"double": {
+		"prefix": "double",
+		"body": [
+			"double"
+		],
+		"description": "a 64 bits float"
+	},
+	"string": {
+		"prefix": "string",
+		"body": [
+			"string"
+		],
+		"description": "a UTF-8 encoded string"
+	},
+	"uuid": {
+		"prefix": "uuid",
+		"body": [
+			"uuid"
+		],
+		"description": "an UUID"
+	},
+	"blob_id": {
+		"prefix": "blob_id",
+		"body": [
+			"blob_id"
+		],
+		"description": "a UUID for a blob in the persistence layer"
+	},
+	"docstr": {
+		"prefix": "docstr",
+		"body": [
+			"\"\"\"$0\"\"\""
+		],
+		"description": "The documentation string"
+	},
+	"A vec<T,size>": {
+		"prefix": "vec",
+		"body": [
+			"vec<${1|float,double,int8,int16,int32,int64,uint8,uint16,uint32,uint64|},${2:size}>$0"
+		],
+		"description": "A vec<T, size> where T is numeric"
+	},
+	"A mat<T, cols, rows>": {
+		"prefix": "mat",
+		"body": [
+			"mat<${1|float,double,int8,int16,int32,int64,uint8,uint16,uint32,uint64|},${2:cols},${3:rows}>$0"
+		],
+		"description": "A mat<T, cols, row> where T is numeric"
+	},
+	"An optional<T>": {
+		"prefix": "optional",
+		"body": [
+			"optional<${1:T}>$0"
+		],
+		"description": "An optional<T>"
+	},
+	"A set<T>": {
+		"prefix": "set",
+		"body": [
+			"set<${1:T}>$0"
+		],
+		"description": "a set<T>"
+	},
+	"A vector<T>": {
+		"prefix": "vector",
+		"body": [
+			"vector<${1:T}>$0"
+		],
+		"description": "a vector<T>"
+	},
+	"A map<K, V>": {
+		"prefix": "map",
+		"body": [
+			"map<${1:K}, ${2:V}>$0"
+		],
+		"description": "a map<K V>"
+	},
+	"A tuple<T0,T1>": {
+		"prefix": "tuple",
+		"body": [
+			"tuple<${1:T0}, ${2:T1}>$0"
+		],
+		"description": "a tuple<T0, T1>"
+	},
+	"A variant<T0,T1>": {
+		"prefix": "variant",
+		"body": [
+			"variant<${1:T0}, ${2:T1}>$0"
+		],
+		"description": "a variant<T0, T1>"
+	},
+	"A xarray<T>": {
+		"prefix": "xarray",
+		"body": [
+			"xarray<${1:T}>$0"
+		],
+		"description": "a xarray<T>"
+	},
+	"A key<T>": {
+		"prefix": "key",
+		"body": [
+			"key<${0:T}>"
+		],
+		"description": "A key<T> where T is a concept, a club or any_concept"
+	},
+	"A key field": {
+		"prefix": "keyfield",
+		"body": [
+			"key<${1:ConceptName}> ${2:fieldName}Key;$0"
+		],
+		"description": "A struct field holding a key to a concept (follows naming convention)"
+	},
+	"An optional key field": {
+		"prefix": "opt-key",
+		"body": [
+			"optional<key<${1:ConceptName}>> ${2:fieldName}Key;$0"
+		],
+		"description": "An optional key field (nullable reference to a concept)"
+	},
+	"A namespace": {
+		"prefix": "namespace",
+		"body": [
+			"namespace ${1:name} {${2:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}} {",
+			"   $0",
+			"};"
+		],
+		"description": "A namespace with UUID (replace x's with actual UUID)"
+	},
+	"A concept": {
+		"prefix": "concept",
+		"body": [
+			"concept ${1:name};$0"
+		],
+		"description": "A concept declaration"
+	},
+	"A concept with inheritance": {
+		"prefix": "isa",
+		"body": [
+			"concept ${1:DerivedConcept} is a ${2:BaseConcept};$0"
+		],
+		"description": "A concept with single inheritance (is a)"
+	},
+	"A club": {
+		"prefix": "club",
+		"body": [
+			"club ${1:name};$0"
+		],
+		"description": "a club"
+	},
+    "A membership": {
+    "prefix": "membership",
+    "body": [
+      "membership ${1:Club} ${2:Concept};$0"
+    ],
+    "description": "a structure"
+    },
+	"An enumeration": {
+		"prefix": "enum",
+		"body": [
+			"enum ${1:name} {",
+			"   ${2:value1},",
+			"   ${3:value2}",
+			"   $0",
+			"};"
+		],
+		"description": "An enumeration declaration"
+	},
+	"An enum field with default": {
+		"prefix": "enum-field",
+		"body": [
+			"${1:EnumType} ${2:fieldName} = .${3:enumValue};$0"
+		],
+		"description": "A struct field with enum type and default value"
+	},
+	"A structure": {
+		"prefix": "struct",
+		"body": [
+			"struct ${1:name} {",
+			"   $0",
+			"};"
+		],
+		"description": "A structure declaration"
+	},
+	"A structure with default values": {
+		"prefix": "struct-defaults",
+		"body": [
+			"struct ${1:name} {",
+			"   ${2:string} ${3:fieldName} = ${4:\"defaultValue\"};",
+			"   $0",
+			"};"
+		],
+		"description": "A structure with default field values"
+	},
+	"An attachment": {
+		"prefix": "attachment",
+		"body": [
+            "attachment<${1:ConceptName}, ${2:StructName}> ${3:attachmentName};$0"
+		],
+		"description": "An attachment linking a concept to a data structure"
+	},
+	"An attachment block": {
+		"prefix": "attachment-block",
+		"body": [
+			"// Attachments",
+			"namespace ${1:MyNamespace} {${2:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}} {",
+			"",
+			"\"\"\"${3:Description of attachment}.\"\"\"",
+			"attachment<${4:ConceptName}, ${5:StructName}> ${6:attachmentName};",
+			"",
+			"$0",
+			"};"
+		],
+		"description": "A complete attachment namespace block with docstring"
+	},
+	"A function pool": {
+		"prefix": "function_pool",
+		"body": [
+			"function_pool ${1:name} {${2:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}} {",
+			"   $0",
+			"};"
+		],
+		"description": "A function pool with UUID (replace x's with actual UUID)"
+	},
+	"An attachment function pool": {
+		"prefix": "attachment_function_pool",
+		"body": [
+			"\"\"\"${1:Description of this attachment function pool}.\"\"\"",
+			"attachment_function_pool ${2:ModelName} {${3:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}} {",
+			"",
+			"   \"\"\"${4:Description of function}.\"\"\"",
+			"   mutable ${5:void} ${6:functionName}(${7:args});",
+			"   $0",
+			"};"
+		],
+		"description": "A attachment function pool with mutable function template"
+	},
+	"A mutable function": {
+		"prefix": "mutable",
+		"body": [
+			"\"\"\"${1:Description of this mutable operation}.\"\"\"",
+			"mutable ${2:void} ${3:functionName}(${4:args});$0"
+		],
+		"description": "A mutable function in a attachment function pool (modifies state)"
+	},
+	"A query function": {
+		"prefix": "query",
+		"body": [
+			"\"\"\"${1:Description of this query}.\"\"\"",
+			"${2:ReturnType} ${3:functionName}(${4:args});$0"
+		],
+		"description": "A query function in an attachment function pool (read-only)"
+	},
+	"The id attribute": {
+		"prefix": "aid",
+		"body": [
+			"{${1:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx}}$0"
+		],
+		"description": "Attribute ID with UUID placeholder (replace x's with actual UUID)"
+	}
+}

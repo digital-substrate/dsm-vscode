@@ -1,0 +1,71 @@
+{
+  "name": "ds-dsm",
+  "displayName": "DSM Syntax Highlighter",
+  "description": "Digital Substrate Model extensions",
+  "publisher": "digitalsubstrate",
+  "category":"language",
+  "icon": "ds.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "light"
+  },
+  "bugs": {
+    "email": "support@digitalsubstrate.io"
+  },
+  "license": "MIT",
+  "pricing": "Free",
+  "version": "1.2.7",
+  "engines": {
+    "vscode": "^1.87.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "keywords": ["Digital Substrate", "DSM"],
+  "contributes": {
+    "languages": [
+      {
+        "id": "dsm",
+        "aliases": [
+          "DSM",
+          "dsm"
+        ],
+        "extensions": [
+          "dsm"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "dsm",
+        "scopeName": "source.dsm",
+        "path": "./syntaxes/dsm.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "dsm",
+        "path": "./snippets.json"
+      }
+    ],
+    "problemMatchers": [
+      {
+        "name": "dsm",
+        "owner": "dsm",
+        "fileLocation": [
+          "autoDetect",
+          "${workspaceFolder}"
+        ],
+        "pattern": {
+          "regexp": "^(.*):(\\d+):(\\d+):\\s+(.*)$",
+          "file": 1,
+          "line": 2,
+          "column": 3,
+          "message": 4
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,85 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "DS-DSM",
+	"patterns": [
+		{
+			"match": "(id)=\"(\\h{8}-\\h{4}-\\h{4}-\\h{4}-\\h{12})\"",
+			"captures": {
+				"1": { "name": "keyword.dsm" },
+				"2": { "name": "constant.uuid.dsm" }
+			}
+		},
+		{
+			"match": "\\{\\h{8}-\\h{4}-\\h{4}-\\h{4}-\\h{12}\\}",
+			"name": "constant.uuid.dsm"
+		},
+		{
+			"match": "(key)<([a-zA-Z0-9:]+)>",
+			"captures": {
+				"1": { "name": "keyword.dsm" },
+				"2": { "name": "entity.name.class.dsm" }
+			}
+		},
+		{
+			"match": "\\b(true|false)\\b",
+			"name": "constant.language.boolean.dsm"
+		},
+		{
+			"match": "\\.[A-Za-z][a-zA-Z0-9_]*",
+			"name": "constant.enum.dsm"
+		},
+		{
+			"match": "\\b([a-zA-Z_0-9]*)Keys?\\b",
+			"name": "variable.key.dsm"
+		},
+		{
+			"match": "\\b([A-Z][a-zA-Z_0-9]*)\\b",
+			"name": "entity.name.class.dsm"
+		},
+		{
+			"match": "\\b(-?([0-9.]+))\\b",
+			"name": "constant.numeric.dsm"
+		},
+		{
+			"match": "\\b(namespace|concept|any_concept|is a|club|membership|enum|struct|attachment|function_pool|attachment_function_pool|mutable)\\b",
+			"name": "keyword.dsm"
+		},
+		{
+			"match": "\\b(void|bool|uint8|uint16|uint32|uint64|int8|int16|int32|int64|float|double|blob_id|commit_id|uuid|string|blob)\\b",
+			"name": "storage.type.dsm"
+		},
+		{
+			"match": "\\b(vec|mat|tuple|optional|vector|set|map|xarray|any|variant)\\b",
+			"name": "storage.class.dsm"
+		},
+		{
+			"begin": "\"\"\"",
+			"end": "\"\"\"",
+			"name": "punctuation.definition.comment.begin.dsm",
+			"patterns": [
+				{
+					"name": "constant.character.escape.dsm",
+					"match": "\\\\."
+				}
+			]
+		},
+		{
+			"begin": "\"",
+			"end": "\"",
+			"name": "string.quoted.double.dsm",
+			"patterns": [
+				{
+					"name": "constant.character.escape.dsm",
+					"match": "\\\\."
+				}
+			]
+		},
+		{
+			"begin": "//",
+			"end": "$",
+			"name": "comment.line.dsm"
+		}
+	],
+	"repository": {},
+	"scopeName": "source.dsm"
+}
