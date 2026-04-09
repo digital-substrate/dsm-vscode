@@ -444,7 +444,7 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 
 ## License
 
-UNLICENSED - Digital Substrate proprietary software
+MIT License — See [LICENSE](LICENSE) for details.
 
 ---
 

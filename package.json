@@ -13,6 +13,10 @@
     "email": "support@digitalsubstrate.io"
   },
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digital-substrate/dsm-vscode"
+  },
   "pricing": "Free",
   "version": "1.2.7",
   "engines": {
