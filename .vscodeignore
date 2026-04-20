@@ -1,4 +1,7 @@
 .vscode/**
 .vscode-test/**
+.github/**
 .gitignore
+.DS_Store
+CONTRIBUTING.md
 vsc-extension-quickstart.md
