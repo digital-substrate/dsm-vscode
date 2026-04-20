@@ -1,5 +1,12 @@
 # Change Log
 
+## Version 1.2.7
+
+### Changed
+- Published on [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=DigitalSubstrate.ds-dsm)
+- Added repository URL (GitHub public mirror)
+- Fixed license in README (was "UNLICENSED proprietary", now MIT)
+
 ## Version 1.2.0
 
 ### Features

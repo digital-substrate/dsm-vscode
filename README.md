@@ -294,9 +294,9 @@ struct GraphTopology {
 
 ## Real-World Examples
 
-The Viper repository includes comprehensive DSM examples in `dsm_samples/`:
+Comprehensive DSM examples are available in the [dsm-samples](https://github.com/digital-substrate/dsm-samples) repository:
 
-- **Graph modeling** (`dsm_samples/Ge/`): Complete graph topology system demonstrating:
+- **Graph modeling** (`Ge/`): Complete graph topology system demonstrating:
   - Concept definitions: `Graph`, `Vertex`, `Edge`
   - Attachment system for graph topology and visual attributes
   - **Attachment function pools** for collaborative editing:
@@ -306,7 +306,7 @@ The Viper repository includes comprehensive DSM examples in `dsm_samples/`:
   - Mutable operations with proper return types (`key<T>`, `void`)
   - Query functions for state inspection
 
-- **3D rendering system** (`dsm_samples/Re/`): Raptor rendering engine models including:
+- **3D rendering system** (`Re/`): Raptor rendering engine models including:
   - Camera system with depth of field and motion blur
   - Material system with inheritance (matte, mirror, multilayer)
   - Lighting, textures, and environment
@@ -448,4 +448,4 @@ MIT License — See [LICENSE](LICENSE) for details.
 
 ---
 
-**Digital Substrate** | [Documentation](../../doc/DSM.md) | [Getting Started](../../doc/Getting_Started.md)
+**Digital Substrate** | [Report an issue](https://github.com/digital-substrate/dsm-vscode/issues) | [Contributing](CONTRIBUTING.md)
