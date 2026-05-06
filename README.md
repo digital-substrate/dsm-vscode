@@ -4,6 +4,8 @@
 
 The DSM extension provides comprehensive language support for `.dsm` files, including syntax highlighting, intelligent snippets, and integration with DSM tools.
 
+This extension implements editor support for DSM. The language itself — surface grammar and the canonical JSON wire format used for tooling — is specified at [github.com/digital-substrate/dsm](https://github.com/digital-substrate/dsm).
+
 ## Features
 
 ### Syntax Highlighting
@@ -441,6 +443,13 @@ None at this time. Please report issues to: support@digitalsubstrate.io
 ## Release Notes
 
 See [CHANGELOG.md](CHANGELOG.md) for version history.
+
+## Related Projects
+
+- **DSM Language Specification**: [dsm](https://github.com/digital-substrate/dsm) — Grammar and JSON wire format, the language-level contract this extension implements editor support for
+- **JetBrains Plugin**: [dsm-jetbrains](https://github.com/digital-substrate/dsm-jetbrains) — DSM language support for IntelliJ-family IDEs
+- **DSM Examples**: [dsm-samples](https://github.com/digital-substrate/dsm-samples) — Reference DSM models
+- **DSM Utilities**: `dsm_util.py` — Command-line tool for DSM validation (distributed with Viper DevKit)
 
 ## License
 
