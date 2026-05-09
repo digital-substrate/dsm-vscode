@@ -455,7 +455,7 @@ See [CHANGELOG.md](CHANGELOG.md) for version history.
 - **DSM Language Specification**: [dsm](https://github.com/digital-substrate/dsm) — Grammar and JSON wire format, the language-level contract this extension implements editor support for
 - **JetBrains Plugin**: [dsm-jetbrains](https://github.com/digital-substrate/dsm-jetbrains) — DSM language support for IntelliJ-family IDEs
 - **DSM Examples**: [dsm-samples](https://github.com/digital-substrate/dsm-samples) — Reference DSM models
-- **DSM Utilities**: `dsm_util.py` — Command-line tool for DSM validation (distributed with Viper DevKit)
+- **DSM Utilities**: [`dsm_util.py`](https://github.com/digital-substrate/dsviper-tools) — Command-line **semantic validator** for `.dsm` files. The extension already validates syntax against the grammar.
 
 ## License
 
