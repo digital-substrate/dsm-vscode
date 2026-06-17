@@ -1,5 +1,9 @@
 # Change Log
 
+## Version Unreleased
+
+_No changes yet. Bug fixes for the next 1.2.x patch release will be listed here._
+
 ## Version 1.2.7
 
 ### Changed
