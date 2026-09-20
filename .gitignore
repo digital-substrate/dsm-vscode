@@ -1,2 +1,6 @@
 *.vsix
 node_modules/
+
+# Claude Code — local only, not for distribution
+CLAUDE.md
+.claude/
